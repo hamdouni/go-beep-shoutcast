@@ -1,12 +1,19 @@
 package main
 
 import (
+	"image"
+	_ "image/jpeg"
 	"log"
+	"net/http"
+	"os"
+
+	"github.com/dolmen-go/kittyimg"
+
+	"go-beep-shoutcast/shoutcast"
 
 	"github.com/faiface/beep"
 	"github.com/faiface/beep/mp3"
 	"github.com/faiface/beep/speaker"
-	"github.com/romantomjak/shoutcast"
 )
 
 func main() {
@@ -18,6 +25,21 @@ func main() {
 	// Callback function to be called when song changes
 	stream.MetadataCallbackFunc = func(m *shoutcast.Metadata) {
 		println("Now listening to: ", m.StreamTitle)
+		println("StreamURL: ", m.StreamURL)
+		if m.StreamURL != "" {
+			resp, err := http.Get(m.StreamURL)
+			if err != nil {
+				println("[ERROR] could not get ", m.StreamURL)
+				return
+			}
+			img, _, err := image.Decode(resp.Body)
+			if err != nil {
+				println("[ERROR] could not decode image")
+				return
+			}
+			kittyimg.Fprintln(os.Stdout, img)
+
+		}
 	}
 
 	// Decode audio
