@@ -1,0 +1,10 @@
+2023/10/18 11:11:00 [DEBUG] Received metadata:[StreamTitle='Commercial-free - Listener-supported' StreamUrl='http://img.radioparadise.com/covers/l/105.jpg' ]
+Now listening to:  Commercial-free - Listener-supported
+2023/10/18 11:11:11 [DEBUG] Received metadata:[StreamTitle='Commercial-free - Listener-supported' StreamUrl='http://img.radioparadise.com/covers/l/105.jpg' ]
+2023/10/18 11:11:16 [DEBUG] Received metadata:[StreamTitle='Chris Isaak - Don't Make Me Dream About You' StreamUrl='http://img.radioparadise.com/covers/l/B000002LGI.jpg' ]
+Now listening to:  Chris Isaak - Don't Make Me Dream About You
+2023/10/18 11:14:43 [DEBUG] Received metadata:[StreamTitle='Ween - Falling Out' StreamUrl='http://img.radiopara]
+Now listening to:  Ween - Falling Out
+2023/10/18 11:14:44 [DEBUG] Received metadata does not begin with StreamTitle
+2023/10/18 11:14:45 [DEBUG] Received metadata does not begin with StreamTitle
+2023/10/18 11:14:45 [INFO] Closing https://radioparadise.com
