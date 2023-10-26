@@ -31,7 +31,11 @@ func main() {
 	if err != nil {
 		panic(err)
 	}
-	defer streamer.Close()
+	defer func() {
+		if err = streamer.Close(); err != nil {
+			panic(err)
+		}
+	}()
 
 	// Initialize speaker
 	err = speaker.Init(format.SampleRate, 8192)
