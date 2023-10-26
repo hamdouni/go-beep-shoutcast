@@ -2,10 +2,7 @@ module go-beep-shoutcast
 
 go 1.20
 
-require (
-	github.com/faiface/beep v1.1.0
-	github.com/romantomjak/shoutcast v1.2.0
-)
+require github.com/gopxl/beep v1.1.0
 
 require (
 	github.com/hajimehoshi/go-mp3 v0.3.0 // indirect
