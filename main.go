@@ -9,15 +9,6 @@ import (
 )
 
 func main() {
-	// stream, err := shoutcast.Open("http://stream.radioparadise.com/mp3-128")
-	// if err != nil {
-	// 	panic(err)
-	// }
-	//
-	// // Callback function to be called when song changes
-	// stream.MetadataCallbackFunc = func(m *shoutcast.Metadata) {
-	// 	println("Now listening to: ", m.StreamTitle)
-	// }
 	streamURL := "http://stream.radioparadise.com/mp3-192"
 	resp, err := http.Get(streamURL)
 	if err != nil {
