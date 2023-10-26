@@ -38,7 +38,7 @@ func main() {
 	}()
 
 	// Initialize speaker
-	err = speaker.Init(format.SampleRate, 8192)
+	err = speaker.Init(format.SampleRate, 16384)
 	if err != nil {
 		panic(err)
 	}
